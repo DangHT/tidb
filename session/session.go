@@ -1652,6 +1652,7 @@ func (s *session) NewTxn(ctx context.Context) error {
 		StartTS:       txn.StartTS(),
 		ShardStep:     int(s.sessionVars.ShardAllocateStep),
 	}
+	logutil.Logger(ctx).Info("hello transaction")
 	return nil
 }
 
